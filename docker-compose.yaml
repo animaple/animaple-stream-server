@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  rtmp-server:
+    container_name: "rtmp-server"
+    build:
+      context: ./rtmp-server
+    restart: unless-stopped
+    ports:
+      - "1935:1935" 
+    expose:
+      - 1935
